@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Services;
+
+use GuzzleHttp\Client;
+
+class ApiConsumerSWAPI
+{
+    protected $client;
+    protected $endpoint;
+
+    public __construct()
+    {
+       $this->client = $this-> createHTTPClient().
+    }
+
+
+
+    public function createHTTPClient($endpoint = null)
+    {
+        return new Client([
+            'base_url' => 'http://swapi.co/api/films/',
+            'default' => [
+                'exceptions' => false,
+                'headers' => [
+                    'User-Agent' => 'consume-swapi',
+                    'Accept' => 'application/json',
+                ],
+            ],
+        ]);
+
+       // $this->endpoint = $endpoint;
+    }
+    
+
+    public function get(): Array
+    {
+        $request = $this->client->get();
+
+        $response = $request->getBody()->getContents();
+        
+        return json_decode($response);
+    }
+    
+}

@@ -12,6 +12,10 @@
 */
 
 $router->get('/', function () use ($router) {
-//    phpinfo();
     return $router->app->version();
+});
+
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->get('movie', 'MovieController@index');
 });
