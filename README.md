@@ -43,7 +43,7 @@ docker run --rm --interactive --tty -v $PWD/api-starwars:/app composer install
 ```
 
 #### Importante
-Certifiquese que as portas 8080 e 9000 não estejam sendo usadas por outra aplicação, ambas serão usadas pelo NGINX e PHP respectivamente. 
+Certifique-se que as portas 8080 e 9000 não estejam sendo usadas por outra aplicação, ambas serão usadas pelo NGINX e PHP respectivamente. 
 
 
 ## Como utilizar
@@ -72,6 +72,6 @@ Caso queira usar o [Postman](https://www.postman.com/) para testes, importe o ar
  
 
 ## Abordagem
-Como se tratava de um volume pequeno de retorno de dados, o consumo se dá somente em uma requisição trazendo todos os filme, em seguida fazendo o tratamento json para objeto e logo em seguida a ordenação de acordo com requisição no parametro "order".
+Como se tratava de um volume pequeno de retorno de dados, o consumo se dá somente em uma requisição trazendo todos os filme, em seguida fazendo o tratamento json para objeto e logo em seguida a ordenação de acordo com requisição no parâmetro "order".
 
 São 6 tipos de lista de visualização neste caso foi bem interessante usar suite de testes.  
