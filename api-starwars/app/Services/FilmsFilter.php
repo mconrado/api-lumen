@@ -14,7 +14,7 @@ class FilmsFilter
             'release'   => array(4,5,6,1,2,3),
             'rinster'   => array(4,5,1,2,3,6),
             'machete'   => array(4,5,2,3,6),
-            'magnota'   => array(4,5,1,2,3,6),
+            'magnotta'  => array(4,5,1,2,3,6),
             'lee'       => array(4,5,6,1,2,3)
         );
     }
