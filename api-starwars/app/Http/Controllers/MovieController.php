@@ -24,8 +24,7 @@ class MovieController extends Controller
         $view = $request->get('order');
         $orderedFilms = $filmsFilter->orderByView($filmsArray, $view);
 
-
-        return json_encode($orderedFilms);
+        return response()->json($orderedFilms);
     }
 
 }
