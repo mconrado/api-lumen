@@ -41,6 +41,8 @@ docker-compose up --build -d
 ```bash
 docker run --rm --interactive --tty -v $PWD/api-starwars:/app composer install
 ```
+Copie o arquivo .env.example e salve como .env
+
 
 #### Importante
 Certifique-se que as portas 8080 e 9000 não estejam sendo usadas por outra aplicação, ambas serão usadas pelo NGINX e PHP respectivamente. 
