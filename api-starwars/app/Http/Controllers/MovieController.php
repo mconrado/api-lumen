@@ -4,12 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\ApiConsumerSWAPI;
+use App\Models\Film;
 
 class MovieController extends Controller
 {
-    public function index(ApiConsumerSWAPI $apiConsumerSWAPI)
+    public function index(Request $request, ApiConsumerSWAPI $apiConsumerSWAPI)
     {
-        dd($apiConsumerSWAPI->get());
+
+        $mapper = new \JsonMapper();
+        $filmsJson = $apiConsumerSWAPI->get();
+
+
+
+        $filmsArray = $mapper->mapArray(
+            $filmsJson, array(), 'App\Models\Film' 
+        );
+
+        dd($filmsArray);
     }
 
 }

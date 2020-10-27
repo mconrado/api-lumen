@@ -7,7 +7,6 @@ use GuzzleHttp\Client;
 class ApiConsumerSWAPI
 {
     protected $client;
-    protected $endpoint;
 
     public function __construct()
     {
