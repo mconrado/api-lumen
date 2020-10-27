@@ -25,7 +25,7 @@ class MovieController extends Controller
         $orderedFilms = $filmsFilter->orderByView($filmsArray, $view);
 
 
-        return json_encode(array_values($orderedFilms));
+        return json_encode($orderedFilms);
     }
 
 }

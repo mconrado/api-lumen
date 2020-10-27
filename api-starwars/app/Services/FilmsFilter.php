@@ -34,9 +34,11 @@ class FilmsFilter
             {
                 $position = array_search($film->episode_id, $viewOrder);
                 $filmsOrdered[$position] = $film;
+
             }
         }
 
-        return $filmsOrdered;    
+        ksort($filmsOrdered);
+        return array_values($filmsOrdered);    
     }
 }
