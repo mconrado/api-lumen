@@ -43,7 +43,7 @@ docker run --rm --interactive --tty -v $PWD/api-starwars:/app composer install
 ```
 
 #### Importante
-Certifiquese que as portas 8080 e 9000 não estejam sendo usadas por outra aplicação, ambas serão usadas pelo NGINX e PHP respectivamente. 
+Certifique-se que as portas 8080 e 9000 não estejam sendo usadas por outra aplicação, ambas serão usadas pelo NGINX e PHP respectivamente. 
 
 
 ## Como utilizar
