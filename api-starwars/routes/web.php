@@ -17,5 +17,5 @@ $router->get('/', function () use ($router) {
 
 
 $router->group(['prefix' => 'api'], function () use ($router) {
-    $router->get('movie', 'MovieController@index');
+    $router->get('movies', 'MovieController@index');
 });

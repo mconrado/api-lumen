@@ -6,7 +6,6 @@ class FilmsFilter
 {
 
     private $orderDict;
-    
      
     public function __construct()
     {
@@ -39,7 +38,5 @@ class FilmsFilter
         }
 
         return $filmsOrdered;    
-
     }
-    
 }

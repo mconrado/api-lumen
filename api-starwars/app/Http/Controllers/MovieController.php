@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\ApiConsumerSWAPI;
+use App\Services\FilmsFilter;
 use App\Models\Film;
 
 class MovieController extends Controller
@@ -12,15 +13,19 @@ class MovieController extends Controller
     {
 
         $mapper = new \JsonMapper();
+        $filmsFilter = new FilmsFilter();
+
         $filmsJson = $apiConsumerSWAPI->get();
-
-
 
         $filmsArray = $mapper->mapArray(
             $filmsJson, array(), 'App\Models\Film' 
         );
 
-        dd($filmsArray);
+        $view = $request->get('order');
+        $orderedFilms = $filmsFilter->orderByView($filmsArray, $view);
+
+
+        return json_encode(array_values($orderedFilms));
     }
 
 }
